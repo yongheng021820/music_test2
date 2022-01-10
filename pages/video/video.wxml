@@ -1,0 +1,31 @@
+<!--pages/video/video.wxml-->
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+
+<text>pages/video/video.wxml</text>
+<view>hello video</view>
+<h2>hello video h2</h2>
+<block wx:for="{{topMovies}}" wx:key="id">
+  <view>{{item.name}}</view>
+</block>
+
+<view>
+  <view class="video">
+    <block wx:for="{{topMovies}}" wx:key="*this">
+      <view class="item">
+        <view class="album">
+          <image src="{{item.cover}}" mode="widthFix"
+          class="item_img"></image>
+          <!-- mode="widthFix"  根据宽度修复高度 -->
+          <view class="info">
+            <view class="count">{{format.formatCount(item.playCount)}}</view>
+            <view class="duration">{{format.fromatDuration(item.mv.videos[0].duration)}}</view>
+          </view>
+        </view>
+        <view class="content">
+          {{item.mv.title}}--{{item.artistName}}
+        </view>
+      </view>
+
+    </block>
+  </view>
+</view>
