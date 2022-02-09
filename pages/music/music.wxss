@@ -1,0 +1,39 @@
+/* pages/music/music.wxss */
+.van-search__content {
+  /* 设置输入框背景色 */
+  background-color: white !important;
+}
+
+.swiper {
+  /* 设置圆角 */
+  border-radius: 40rpx;
+  overflow: hidden;
+  
+  /* 设置轮播图左右边距 */
+  padding: 0 20rpx;
+
+  /* 解决部分渲染样式不能正常显示圆角问题 */
+  transform: translateY(0);
+}
+
+.swiper-item {
+  /* 去除图片下方默认3px */
+  display: flex;
+}
+.image {
+  width: 100%;
+}
+
+.van-search {
+  /* 去掉搜索框左右padding */
+  padding: 10px 0 !important;
+}
+
+.bottom {
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+  font-size: 40rpx;
+  font-weight: 900;
+}
+
+

@@ -1,0 +1,14 @@
+<!--components/area-header/index.wxml-->
+<!-- <text>components/area-header/index.wxml</text> -->
+<view class="header">
+  <view class="title">{{title}}</view>
+  <view class="right"  bindtap="right_click">
+    <view class="slot">
+      <slot></slot>
+    </view>
+    <view class="content">
+      <text class="right_text">{{rightText}}</text>
+      <image class="icon" src="../../pages/assets/images/icons/arrow-right.png"></image>
+    </view>
+  </view>
+</view>

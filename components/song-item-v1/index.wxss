@@ -1,0 +1,35 @@
+/* components/song-item-v1/index.wxss */
+.item {
+  display: flex;
+  width: 100%;
+  /* justify-content: space-evenly; */
+  padding: 10rpx 20rpx;
+  /* text-align: center; */
+}
+
+.item .content {
+  width: 40%;
+  position: relative;
+  left: 10px;
+  /* top: 10px; */
+}
+.item .image {
+  width: 180rpx;
+  height: 140rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.item .row image{
+  position: relative;
+  top: 50rpx;
+  right: -180rpx;
+  /* right: 0; */
+  width: 24px;
+  height: 24px;
+  /* overflow: hidden; */
+}
+
+.multiline-ellipsis {  display: -webkit-box;  word-break: break-all;  -webkit-box-orient: vertical;  -webkit-line-clamp: 2;   
+overflow: hidden;  
+text-overflow: ellipsis; }

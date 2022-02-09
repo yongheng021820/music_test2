@@ -1,0 +1,6 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "video_item_v1":"../../components/video_item_v1/index"
+  }
+}

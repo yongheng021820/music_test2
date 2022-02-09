@@ -1,0 +1,17 @@
+<!--components/song-menu-area_3/index.wxml-->
+<!-- <text>components/song-menu-area_3/index.wxml</text>
+ -->
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+
+<view class="item">
+  <view class="content" bindtap="click_add">
+    <view class="title">{{obj.name}}</view>
+    <view class="single-ellipsis">1. {{obj.tracks[0].name}}-{{obj.tracks[0].al.name}}</view>
+    <view class="single-ellipsis">2. {{obj.tracks[1].name}}-{{obj.tracks[1].al.name}}</view>
+    <view class="single-ellipsis">3. {{obj.tracks[2].name}}-{{obj.tracks[2].al.name}}</view>
+  </view>
+  <view class="img">
+    <image src="{{obj.coverImgUrl}}" mode="heightFix"></image>
+    <view class="count">{{format.formatCount(obj.playCount)}}</view>
+  </view>
+</view>

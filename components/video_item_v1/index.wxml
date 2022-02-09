@@ -1,0 +1,23 @@
+<!--components/video_item_v1/index.wxml-->
+<!-- <text>components/video_item_v1/index.wxml</text> -->
+
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+
+<!-- 1、在组件内部实现监听组件点击
+在最外层绑定bindtap事件，在对应js文件methods中实现。
+另一种是之间监听组件点击事件
+bindtap="handVideoClicked"
+ -->
+<view class="item" >
+  <view class="album">
+    <image src="{{item.cover}}" mode="widthFix" class="item_img"></image>
+    <!-- mode="widthFix"  根据宽度修复高度 -->
+    <view class="info">
+      <view class="count">{{format.formatCount(item.playCount)}}</view>
+      <view class="duration">{{format.fromatDuration(item.mv.videos[0].duration)}}</view>
+    </view>
+  </view>
+  <view class="content">
+    {{item.mv.title}}--{{item.artistName}}
+  </view>
+</view>

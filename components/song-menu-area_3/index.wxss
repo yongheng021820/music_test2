@@ -1,0 +1,49 @@
+/* components/song-menu-area_3/index.wxss */
+
+.item {
+  display: flex;
+  width: 100%;
+  height: 200rpx;
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+  background-color: #EBEBEB;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.item .content {
+  height: 100%;
+  width: 500rpx;
+  background-color: white;
+}
+.item .content .title {
+  font-size: 32rpx;
+  font-weight: 700;
+  margin-bottom: 10rpx;
+}
+.item .img {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.item .img image{
+  height: 100%;
+  /* width: 200px; */
+}
+
+.item .img .count {
+  position: absolute;
+  bottom: 10rpx;
+  right: 66rpx;
+  font-size: 20rpx;
+  color: white;
+}
+
+.single-ellipsis{ 
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  white-space: nowrap; 
+  margin-right: 30rpx;
+  margin-top: 6rpx;
+}
+

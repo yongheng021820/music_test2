@@ -1,0 +1,19 @@
+/**app.wxss**/
+/* 给所有页面设置属性 */
+page{
+  background-color: #fafafa;
+  /* background-color: red; */
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+
+

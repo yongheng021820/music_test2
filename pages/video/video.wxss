@@ -1,0 +1,17 @@
+/* pages/video/video.wxss */
+.video {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+/* 
+.item_box {
+  width: 48%;
+} */
+
+.item_box {
+  width: 48%;
+}
+
+
+

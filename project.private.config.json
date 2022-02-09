@@ -1,0 +1,36 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/video/video",
+          "pathName": "pages/video/video",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "detail_video",
+          "pathName": "pages/detailVideo/detailVideo",
+          "query": "id=14493007",
+          "scene": null
+        },
+        {
+          "name": "music",
+          "pathName": "pages/music/music",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

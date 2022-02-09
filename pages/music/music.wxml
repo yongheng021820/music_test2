@@ -1,0 +1,44 @@
+<!--pages/music/music.wxml-->
+<!-- <text>pages/music/music.wxml</text>
+<view>hello music</view> -->
+<van-search placeholder="hello" shape="round" background="#fafafa" disabled bind:click-input="handleSearchClick" />
+
+<swiper class="swiper" indicator-dots indicator-color="#ffffff" autoplay interval='4000' style="height: {{swiper_height}}px;">
+  <block wx:for="{{banners}}" wx:key="bannerId">
+    <swiper-item class="swipwe_item">
+      <image class="image" src="{{item.pic}}" bindload="hand_swiper_img_load"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 推荐歌曲 -->
+<view>
+  <area-header title="推荐歌曲" bind:click="chik_clcik">
+    <!-- 给插槽传内容 -->
+    <!-- <text>hello</text> -->
+  </area-header>
+  <view class="song-list">
+    <block wx:for="{{recommendsSongs}}" wx:key="index">
+      <song-item-v1 item="{{item}}"></song-item-v1>
+    </block>
+  </view>
+</view>
+
+<!-- 热歌榜 -->
+<view wx:if="{{hotSongsMenu.length > 0}}">
+  <song-menu-area hotSongsMenu="{{hotSongsMenu}}"></song-menu-area>
+</view>
+<!-- 华语榜单 -->
+<view wx:if="{{recommendsSongs.length > 0}}">
+  <song-menu-area_2 recommendsSongs="{{recommendsSongs}}"></song-menu-area_2>
+</view>
+
+<view class="bottom">巅峰榜</view>
+<song-menu-area_3 obj="{{newRanking}}"></song-menu-area_3>
+
+<song-menu-area_3 obj="{{originRanking}}"></song-menu-area_3>
+<song-menu-area_3 obj="{{upRanking}}"></song-menu-area_3>
+
+<view wx:for="{{10}}" wx:key="index">
+  <view>{{item}}</view>
+</view>
