@@ -1,0 +1,22 @@
+/* pages/music_search/index.wxss */
+.suggestSongs .search{
+  margin: 10rpx 14rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.suggestSongs .item image{
+  width: 50rpx;
+  vertical-align: middle;
+}
+
+
+.single-ellipsis{  
+  width: 100%;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  white-space: nowrap; }
+
+
+
+

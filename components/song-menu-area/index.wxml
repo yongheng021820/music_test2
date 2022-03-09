@@ -1,0 +1,22 @@
+<!--components/song-menu-area/index.wxml-->
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+
+<view class="area">
+  <area-header title="热门歌单"
+  bind:click="click_hot_more"></area-header>
+  <scroll-view scroll-x="{{true}}">
+    <block wx:for="{{hotSongsMenu}}" wx:key="id">
+      <view class="item"  bindtap="handMenuItemClick" data-item="{{item}}">
+        <view>
+          <image src="{{item.coverImgUrl}}" class="img" mode="widthFix"></image>
+        </view>
+        <view class="name">
+          <text>{{item.name}}</text>
+        </view>
+        <view class="count">
+          {{format.formatCount(item.playCount)}}
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

@@ -1,0 +1,23 @@
+/* pages/detailVideo/detailVideo.wxss */
+page {
+  /* 当前页面 */
+  padding-top: 225px;
+}
+.video {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.name {
+  margin-top: 30rpx;
+  font-weight: 700;
+}
+.related_video {
+  margin-top: 40rpx;
+  font-weight: 700;
+}
+
+.info {
+  font-size: 12px;
+}

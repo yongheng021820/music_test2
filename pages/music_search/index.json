@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "hotKeyWord": "../../components/hotKeyWord/index"
+  }
+}

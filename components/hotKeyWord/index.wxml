@@ -1,0 +1,14 @@
+<!--components/hotKeyWord/index.wxml-->
+<!-- <text>components/hotKeyWord/index.wxml</text> -->
+<view class="hotKey">
+  <view class="title">热门搜索</view>
+  <view class="content">
+    <block wx:for="{{hostsKey}}" wx:key="index">
+      <view class="item">{{item.first}}</view>
+    </block>
+  </view>
+</view>
+
+
+
+

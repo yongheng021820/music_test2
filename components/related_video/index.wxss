@@ -1,0 +1,30 @@
+/* components/related_video/index.wxss */
+.related_item {
+  display: flex;
+  font-size: 12px;
+  margin-top: 20rpx;
+}
+
+.rel_img {
+  display: inline-block;
+}
+
+.rel_img image {
+  width: 100px;
+}
+
+.rel_title {
+  margin-left: 20rpx;
+  
+}
+
+/*
+.multiline-ellipsis {
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+*/

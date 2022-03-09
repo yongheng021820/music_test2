@@ -1,12 +1,18 @@
 {
   "pages": [
     "pages/video/video",
-    "pages/music/music"
-   
+    "pages/music/music",
+    "pages/detailVideo/detailVideo",
+    "components/related_video/index",
+    "pages/music_search/index",
+    "pages/detail-songs/index",
+    "pages/detail-songs2/index",
+    "pages/detail-songs3/index",
+    "pages/music_player/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#fafafa",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
   },
@@ -27,6 +33,5 @@
     ]
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "sitemapLocation": "sitemap.json"
 }

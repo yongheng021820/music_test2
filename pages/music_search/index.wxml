@@ -1,0 +1,28 @@
+<!--pages/music_search/index.wxml-->
+<!-- <text>pages/music_search/index.wxml</text> -->
+<van-search background="#dfe6e9" shape="round" bind:change="handleSearch" bind:search="handleSearchAction"></van-search>
+<!--  background背景色-->
+<!-- shape="round" 圆角-->
+
+<!-- 热门搜索 -->
+<hotKeyWord wx:if="{{!suggestSongs.length && !searchValue.length}}"  hostsKey="{{hostsKey}}"></hotKeyWord>
+
+<!-- 建议搜索 -->
+<!-- <view wx:elif="{{suggestSongs.lenth && searchResult.length}}" class="suggestSongs"> -->
+  <view wx:else class="suggestSongs">
+  <view class="search">搜索"{{searchValue}}"</view>
+  <block wx:for="{{suggestSongs}}" wx:key="index">
+    <view class="item single-ellipsis" bindtap="click_item"
+    data-item="{{item}}">
+      <image mode="widthFix" src="../assets/images/icons/search_icon.png"></image>
+      <text>{{item.keyword}}</text>
+    </view>
+  </block>
+</view>
+<!-- 
+<view wx:else>
+  搜索内容
+</view> -->
+
+<!-- 搜索结果 -->
+<!-- <view></view> -->

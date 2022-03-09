@@ -1,0 +1,19 @@
+<!--components/song-menu-area/index.wxml-->
+<view class="area">
+  <area-header title="华语推荐"></area-header>
+  <scroll-view scroll-x="{{true}}">
+    <block wx:for="{{recommendsSongs}}" wx:key="id">
+      <view class="item">
+          <view>
+            <image src="{{item.al.picUrl}}" class="img" mode="widthFix"></image>
+          </view>
+        <view class="name">
+          <text>{{item.name}}</text>
+        </view>
+        <view class="count">
+          {{item.playCount}}
+        </view>
+        </view>
+    </block>
+  </scroll-view>
+</view>

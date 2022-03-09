@@ -1,0 +1,45 @@
+/* components/area-header/index.wxss */
+.header {
+  display: flex;
+  margin: 40rpx 10rpx;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.header .right {
+  text-align: center;
+} 
+
+/* .right .right_text {
+  position: relative;
+  bottom: 5px;
+  right: 10rpx;
+} */
+
+/* 测试用  根据css属性判断插槽 */
+/* .right .slot:empty {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+} */
+
+.right .slot:empty + .content {
+  display: flex;
+}
+.right .content{
+  display: none;
+  position: relative;
+  right: 17rpx;
+  align-items: center;
+  font-size: 28rpx;
+  color: #777;
+}

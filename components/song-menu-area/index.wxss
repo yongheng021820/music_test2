@@ -1,0 +1,41 @@
+/* components/song-menu-area/index.wxss */
+.area {
+  /* 获取屏幕宽度 */
+  width: 100vw;
+  /* 让滚动元素在一行显示 */
+  white-space: nowrap;
+}
+.item {
+  display: inline-block;
+  position: relative;
+  width: 180rpx;
+  margin-left: 16rpx; 
+  /* 解决真机测试时图片对不齐的现象 */
+  vertical-align: top;
+}
+.item .img{
+  width: 100%;
+}
+/* 设置最后一个元素右外边距 */
+.item:last-of-type {
+  margin-right: 20rpx;
+}
+
+.item .name {
+  /* height: 200px; */
+  display: -webkit-box;  
+  word-break: break-all;  
+  -webkit-box-orient: vertical;  
+  -webkit-line-clamp: 3;   
+  overflow: hidden;  
+  text-overflow: ellipsis; 
+}
+
+.item .count {
+  position: absolute;
+  top: 150rpx;
+  right: 10rpx;
+  font-size: 20rpx;
+  color: white;
+  /* color: red; */
+}

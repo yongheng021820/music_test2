@@ -1,0 +1,14 @@
+<!--components/related_video/index.wxml-->
+
+
+<view class="related_item">
+  <view class="rel_img">
+    <image src="{{item.coverUrl}}" mode="widthFix"></image>
+  </view>
+
+  <view class="rel_title multiline-ellipsis">
+  {{item.title}}
+  <view>{{item.creator[0].userName}}</view>
+  </view>
+  <!-- {{item}} -->
+</view>

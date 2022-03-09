@@ -33,3 +33,24 @@ const zhRequest = new ZHrequest()
 
 
 export default zhRequest
+
+// get mv url
+export function getMVURL(id){
+  return zhRequest.get("mv/url", {id})
+}
+
+// 播放视频接口
+export function getMVDetail(mvid){
+  return zhRequest.get("mv/detail",{mvid})
+}
+
+// 相关视频接口
+export function getRelatedVideo(id){
+  return zhRequest.get("related/allvideo",{
+    id
+  })
+}
+
+
+
+

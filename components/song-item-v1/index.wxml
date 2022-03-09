@@ -1,0 +1,15 @@
+<!--components/song-item-v1/index.wxml-->
+<!-- <text>components/song-item-v1/index.wxml</text> -->
+
+<view class="item" bindtap="hand_item_click">
+  <view class="image"> 
+    <image  src="{{item.al.picUrl}}"></image>
+  </view>
+  <view class="content">
+    <view class="name">{{item.name}}</view>
+    <view class="source multiline-ellipsis" >{{item.alia}}</view>
+  </view>
+  <view class="row">
+    <image src="../../pages/assets/images/icons/arrow-right.png"></image>
+  </view>
+</view>

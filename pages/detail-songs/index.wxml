@@ -1,0 +1,22 @@
+<!--pages/detail-songs/index.wxml-->
+<!-- <text>pages/detail-songs/index.wxml</text> -->
+<!-- <detail-songs-list></detail-songs-list> -->
+<view>
+  <view class="title">{{rakingInfo.name}}</view>
+  <block wx:for="{{rakingInfo.tracks}}" wx:key="index">
+    <view class="item">
+      <view class="index">
+        {{index + 1}}
+      </view>
+      <view class="single-ellipsis name">
+        <view>{{item.name}}</view>
+        <view class="sq">
+          <image src="../../pages/assets/images/icons/sq_icon.png"></image>
+          {{item.ar[0].name}}
+        </view>
+      </view>
+    </view>
+
+
+  </block>
+</view>
