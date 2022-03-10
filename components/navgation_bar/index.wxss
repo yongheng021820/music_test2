@@ -1,0 +1,48 @@
+/* components/navgation_bar/index.wxss */
+.nav-bar {
+  color: white;
+}
+
+.status {
+  background-color: #74b9ff;
+}
+
+.nav-bar-box {
+  display: flex;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+}  
+.nav-bar-box .left, .nav-bar-box .right {
+  width: 120rpx;
+}
+.nav-bar-box .arrow_left {
+  display: none;
+}
+.nav-bar-box .center {
+  flex: 1;
+}
+.left .arrow_left {
+  position: relative;
+  left: 40rpx;
+  top: 24rpx;
+  width: 48rpx;
+  vertical-align: middle;
+}
+
+.left_slot:empty + .arrow_left {
+  display: block;
+}
+
+.center .text {
+  display: none;
+}
+
+.center .title:empty + .center .text {
+  display: block;
+}
+.center .title {
+  /* height: 44px; */
+  position: relative;
+  /* top:-84rpx; */
+}

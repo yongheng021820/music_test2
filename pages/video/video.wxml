@@ -1,15 +1,11 @@
 <!--pages/video/video.wxml-->
 <!-- <wxs src="../../utils/format.wxs" module="format"></wxs> -->
-
-
-
 <view>
   <view class="video">
     <view wx:for="{{topMovies}}" wx:key="index" class="item_box">
       <!-- item 组件 -->
       <video_item_v1 item="{{item}}" bindtap="handVideoClicked" data-item="{{item}}">
       </video_item_v1>
-
     </view>
   </view>
 </view>

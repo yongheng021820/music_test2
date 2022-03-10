@@ -21,8 +21,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    // handVideoClicked(){
-    //   console.log("item clicked")
-    // }
+    handVideoClicked(){
+      console.log("item clicked")
+    }
   }
 })

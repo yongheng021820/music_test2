@@ -53,7 +53,8 @@ const rankingStore = new HYEventStore({
 })
 
 export {
-  rankingStore
+  rankingStore,
+  rankingMap
 }
 
 // 出口在index

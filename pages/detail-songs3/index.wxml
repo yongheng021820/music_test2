@@ -1,0 +1,37 @@
+<!--pages/detail-songs3/index.wxml-->
+<!-- <text>pages/detail-songs3/index.wxml</text> -->
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+<view class="header">
+  <!-- 背景 -->
+  <image class="bg-img" mode="aspectFill" src="{{info.coverImgUrl}}"></image>
+  <view class="bg-cover"></view>
+  <!-- 内容 -->
+  <view class="content">
+    <image class="image" mode="aspectFill" src="{{info.coverImgUrl}}"></image>
+    <view class="info">
+      <view class="title">{{info.name}}</view>
+      <view class="anthor">
+        <image class="avatar" mode="aspectFill" src="{{info.creator.avatarUrl}}"></image>
+        <text class="nickname">{{info.creator.nickname}}</text>
+      </view>
+      <view class="desc">{{info.description}}</view>
+    </view>
+  </view>
+  <view class="operation">
+    <view class="favor">
+      <image class="icon" mode="widthFix" src="../assets/images/icons/favor_icon.png"></image>
+      <text class="text">{{format.formatCount(info.playCount)}}</text>
+    </view>
+    <view class="share">
+      <image class="icon" mode="widthFix" src="../assets/images/icons/share_icon.png"></image>
+      <text class="text">分享</text>
+    </view>
+  </view>
+</view>
+<view class="box">
+  <block wx:for="{{info.tracks}}"  wx:key="key">
+    <view class="item" data-item="{{item}}" bindtap="click_1">
+      {{index + 1}} <text class="dot">.</text> {{item.name}}
+    </view>
+  </block>
+</view>

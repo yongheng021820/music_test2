@@ -1,0 +1,27 @@
+<!--components/navgation_bar/index.wxml-->
+
+<view class="nav-bar">
+  <view class="status" style="height: {{statusBarHeight}}px;"></view>
+  <view class="nav-bar-box">
+
+    <view class="left" bindtap="handle_arrow">
+      <!-- 插槽与默认内容为互斥关系 -->
+      <!-- 布局时插槽需在默认内容上边 -->
+      <!-- 页面中使用多个插槽，需在js文件中添加属性 options:{
+    multipleSlots:true},-->
+
+      <view class="left_slot">
+        <slot name="left_slot"></slot>
+      </view>
+      <image 
+      class="arrow_left" mode="widthFix" src="../../pages/assets/images/icons/arrow-left.png"></image>
+    </view>
+    <view class="center">
+      <view class="title">
+        <slot name="title"></slot>
+      </view>
+      <view class="text">zhongjian</view>
+    </view>
+    <view class="right"></view>
+  </view>
+</view>

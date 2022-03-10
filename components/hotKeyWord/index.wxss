@@ -1,0 +1,20 @@
+/* components/hotKeyWord/index.wxss */
+.hotKey {
+  margin: 20rpx;
+}
+ .title {
+   font-size: 34rpx;
+  font-weight: 700;
+}
+.hotKey .content {
+  display: flex;
+  flex-wrap: wrap;
+  white-space:nowrap; /*内容横向显示*/
+} 
+.hotKey .content .item {
+  margin: 10rpx 40rpx;
+}
+
+.hotKey .content view:first-child {
+  color: red;
+}

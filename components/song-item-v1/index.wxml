@@ -1,7 +1,7 @@
 <!--components/song-item-v1/index.wxml-->
 <!-- <text>components/song-item-v1/index.wxml</text> -->
 
-<view class="item">
+<view class="item" bindtap="hand_item_click">
   <view class="image"> 
     <image  src="{{item.al.picUrl}}"></image>
   </view>

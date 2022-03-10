@@ -27,6 +27,7 @@ Component({
   methods: {
     right_click(){
       this.triggerEvent("click")
-    }
+    },
+    
   }
 })

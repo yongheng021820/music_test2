@@ -100,9 +100,11 @@ Page({
   },
   chik_clcik(){
     wx.navigateTo({
-      url: '/pages/detail-songs/index',
+      url: '/pages/detail-songs2/index?ranking=originRanking',
     })
+
   },
+  
   //图片加载完成
   hand_swiper_img_load() {
     //获取组件的高度  API--WXML--wx.createSelectorQuery()

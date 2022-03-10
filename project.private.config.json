@@ -29,6 +29,12 @@
           "pathName": "pages/music/music",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "music_player",
+          "pathName": "pages/music/music_player/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

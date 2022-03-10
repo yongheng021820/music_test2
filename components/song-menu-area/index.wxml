@@ -6,7 +6,7 @@
   bind:click="click_hot_more"></area-header>
   <scroll-view scroll-x="{{true}}">
     <block wx:for="{{hotSongsMenu}}" wx:key="id">
-      <view class="item">
+      <view class="item"  bindtap="handMenuItemClick" data-item="{{item}}">
         <view>
           <image src="{{item.coverImgUrl}}" class="img" mode="widthFix"></image>
         </view>
