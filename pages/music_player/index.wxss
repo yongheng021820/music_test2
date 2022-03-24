@@ -60,7 +60,7 @@ page {
   flex: 1;
   position: relative;
   text-align: center;
-  top: 20rpx;
+  top: 60rpx;
   color: white;
   font-size: 40rpx !important;
 }

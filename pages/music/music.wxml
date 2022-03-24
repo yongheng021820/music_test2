@@ -1,6 +1,7 @@
 <!--pages/music/music.wxml-->
 <!-- <text>pages/music/music.wxml</text>
 <view>hello music</view> -->
+
 <van-search placeholder="hello" shape="round" background="#fafafa" disabled bind:click-input="handleSearchClick" />
 
 <swiper class="swiper" indicator-dots indicator-color="#ffffff" autoplay interval='4000' style="height: {{swiper_height}}px;">
@@ -19,20 +20,21 @@
   </area-header>
   <view class="song-list">
     <block wx:for="{{recommendsSongs}}" wx:key="index">
-      <song-item-v1 item="{{item}}"></song-item-v1>
+      <song-item-v1 item="{{item}}" bindtap="handle_itemClick" data-index="{{index}}"></song-item-v1>
     </block>
   </view>
 </view>
 
-<!-- 热歌榜 -->
+<!-- 热门歌单 -->
 <view wx:if="{{hotSongsMenu.length > 0}}">
-  <song-menu-area 
-    hotSongsMenu="{{hotSongsMenu}}">
+  <song-menu-area hotSongsMenu="{{hotSongsMenu}}">
   </song-menu-area>
 </view>
-<!-- 华语榜单 -->
+
+<!-- 华语推荐 -->
 <view wx:if="{{recommendsSongs.length > 0}}">
-  <song-menu-area_2 recommendsSongs="{{recommendsSongs}}"></song-menu-area_2>
+  <song-menu-area_2 recommendsSongs="{{recommendsSongs}}"
+  ></song-menu-area_2>
 </view>
 
 <view class="bottom">巅峰榜</view>
@@ -42,4 +44,28 @@
 
 <view wx:for="{{10}}" wx:key="index">
   <view>{{item}}</view>
+</view>
+
+<!-- 播放工具栏 -->
+<!-- 占位  当工具栏显示是默认会覆盖内容，用占位标签去除影响 -->
+<view class="play-bar-placeholder" wx:if="{{song_detail_length}}"></view>
+<view class="play-bar" wx:if="{{song_detail_length}}"
+bindtap="handlePlayBarClick">
+  <!-- wx:if="{{Object.keys(currentSong).length}}" -->
+  <view class="left">
+    <image mode="aspectFill" 
+    style="animation-play-state: {{playAnimState}}"
+    class="albm album-anim" 
+    src="{{currentSong.al.picUrl}}"></image>
+    <view class="name">{{currentSong.name}}</view>
+    <view>{{Object.keys(songs_detail).length}}</view>
+  </view>
+
+  <!--catchtap 小程序处理事件冒泡的方式 -->
+  <view class="right">
+    <image class="icon play" 
+    catchtap="handle_play_click"
+    src="/pages/assets/images/icons/music/{{isPlaying ? 'pause' : 'play'}}_icon.png"></image>
+    <image class="icon playlist" src="/pages/assets/images/music/playlist_icon.png"></image>
+  </view>
 </view>
